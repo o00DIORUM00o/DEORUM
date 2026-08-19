@@ -14,16 +14,33 @@ A controller-first 2D action RPG built as an original DEORUM game, with the read
 - Tiny objective / win loop
 - Pixel-scaled 16:9 canvas suitable for mobile browsers
 
-## Phase 2 — First real DEORUM room
+## Phase 2 — First DEORUM vertical slice
 
-The prototype geometry has been replaced with an authored location: **Evergreen Edge**.
+Phase 2 now spans two authored locations and carries progression between them.
+
+### Evergreen Edge
 
 - DEORUM forest/path environment rendered directly in canvas
 - Player walk bob / directional presentation
 - NPC: **Mosskeeper Elri**
 - Enemy: **Thornling**
 - NPC interaction and dialogue
-- Authored objective flow: meet Elri, defeat the Thornling, recover the Green Relic
+- Objective flow: meet Elri, defeat the Thornling, recover the Green Relic
+
+### Greenwatch Trail
+
+- Second authored room connected to Evergreen Edge
+- Bidirectional room transition system
+- Progression gate requiring the Green Relic before leaving Evergreen Edge
+- Trail signage and environmental dressing establishing the road toward Greenwatch Harbor
+
+### Game systems added in Phase 2
+
+- Tiny inventory with the **Green Relic** as the first persistent item
+- Browser save/load via `localStorage`
+- Automatic saves on important progression events and room transitions
+- Keyboard debug/manual save (`K`) and load (`L`)
+- Room-specific collision, landmarks, encounters, and presentation
 - DEORUM: THE THIRD CHAPTER title presentation
 
 ## Controls
@@ -33,6 +50,8 @@ The prototype geometry has been replaced with an authored location: **Evergreen 
 | Move | WASD / arrows | Left stick / D-pad |
 | Attack | Space | A / south face button |
 | Interact | E | X / west face button |
+| Save | K | Automatic saves |
+| Load | L | Save auto-loads on start |
 
 ## Run
 
@@ -40,4 +59,4 @@ Serve the repository as static files and open `index.html` in a modern browser. 
 
 ## Next milestone
 
-Expand Phase 2 into a multi-room vertical slice with room transitions, authored sprite sheets, inventory, save state, and audio.
+Continue Phase 2 with authored sprite sheets, a real inventory screen, audio, a second NPC/quest beat on Greenwatch Trail, and the first destination beyond the trail.
